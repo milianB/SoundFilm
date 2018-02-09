@@ -30,7 +30,7 @@ var $addListBtn = $("#add-list-btn");
 var $removeListBtn = $("#remove-list-btn");
 
 //api enpoints
-const request = superagent; // 
+// const request = superagent; // 
 // axios
 const api_endpoint_genres = 'https://api.themoviedb.org/3/genre/movie/list?api_key=308ef47d4177eecfbb266f41f2617b5f&language=en-US';
 const api_endpoint_movies = 'https://api.themoviedb.org/3/discover/movie?api_key=308ef47d4177eecfbb266f41f2617b5f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=';
@@ -58,7 +58,7 @@ function signup(){
 //REGISTER NEW USER END//
 
 //HOME CARROUSEL//
-function homeCarrousel(){	
+function homeCarrousel(){
 	// brenda
   	// Objetivo Carrousel de inicio
   	// Nombre Carrousel 1
@@ -120,7 +120,7 @@ function logout(){
 //LOGOUT END//
 
 function loadPage() {
-	$('#inicio').click(paintButtons);	
+	$('#inicio').click(paintButtons);
 }
 
 function paintButtons(e) {
@@ -138,10 +138,10 @@ function paintButtons(e) {
 			var movieName = element.name;  //extraemos los nombres de los generos
 
 			$button = $('<input>').attr('type', 'button').attr('value', movieName).attr('data-movies', genresId).addClass('button-gnr');
-			//por cada interaccion se crear un elemento se le asigna el value del nombre del genero y un data del id del genero    
+			//por cada interaccion se crear un elemento se le asigna el value del nombre del genero y un data del id del genero
 
 			containButtons.append($button);
-			//  se agregan los botones al contenedor   
+			//  se agregan los botones al contenedor
 
 		});
 
@@ -163,14 +163,14 @@ function paintTitleMovies(event) {
 	//obtenemo el data-movies de cada boton que es el id de los generos
 	// console.log(movieId);
 	var url_list_genres = api_endpoint_movies + moviesId;
-	//concatenamos nuestro enpoint de movies con nuestro id de genero 
+	//concatenamos nuestro enpoint de movies con nuestro id de genero
 	// console.log(url_list_genres);
 	request.get(url_list_genres).then(function (response) {
 		var movies = response.body.results;
 		// console.log(movies);
 		// entrar a title y a id
 		movies.forEach(element => {
-			// console.log(element);          
+			// console.log(element);
 			var movieTitle = element.title;
 			var movieId = element.id;
 			//  console.log(movieId);
@@ -178,7 +178,7 @@ function paintTitleMovies(event) {
 
 			titles = $('<h4 />').text(movieTitle).attr('data-movie', movieId).addClass('title');
 			containerTitles.append(titles);
-			// crear elemento h2 para titulos                         
+			// crear elemento h2 para titulos
 		});
 
 		titles.each(element => {
@@ -211,13 +211,13 @@ function paintInfoMovie(event) {
 		var moviePage = movieBody.homepage;
 
 
-		console.log(moviePoster);  //poster        
+		console.log(moviePoster);  //poster
 		console.log(movieTitle);   //titulo
 		console.log(movieTagline); //tagline
 		console.log(movieDate);    //fecha de lanzamiento
-		console.log(moviePage);    //página 
-								   // soundtrack 
-								     
+		console.log(moviePage);    //página
+								   // soundtrack
+
 
 		//   crear elementos
 		// agregar contenido
@@ -230,7 +230,7 @@ function paintInfoMovie(event) {
 
 $(document).ready(loadPage);
 
-// referencias emc6 
+// referencias emc6
 // <img src="${movie.propiedad}" class="clase">}
 // <h2>${movie.propiedad}</h2>
 // todo el output entre comillas ``
