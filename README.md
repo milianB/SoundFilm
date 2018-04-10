@@ -2,7 +2,8 @@
 
 ¿Una red social que me ayude a encontrar el soundtrack de mis películas favoritas? Ahora es posible!
 
-![splash](docs/ux/wireframes/splash.png)
+![captura de pantalla 2018-04-10 a la s 15 56 11](https://user-images.githubusercontent.com/32876098/38583640-46df2686-3cd9-11e8-9475-54de365f7e3d.png)
+
 
 * **Track:** _Common Core_
 * **Sprint 03:**  _Hackaton_
