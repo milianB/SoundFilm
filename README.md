@@ -1,7 +1,12 @@
 # SOUNDFILM
+
+¿Una red social que me ayude a encontrar el soundtrack de mis películas favoritas? Ahora es posible!
+
+![splash](docs/ux/sketches/Splash.png)
+
 * **Track:** _Common Core_
 * **Sprint 03:**  _Hackaton_
-* **Unidad:** _04_
+* **Unidad:** _04_ 
 
 ## Objetivo
 Crear una aplicación que le brinde usuario la oportunidad de formar colecciones sobre películas mostrando sus posters y soundtrack list.
